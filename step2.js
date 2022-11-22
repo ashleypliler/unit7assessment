@@ -1,5 +1,5 @@
- // 1) Sum Zero = O(n^2)
-
+ // 1) Sum Zero = O(n^2) runtime, O(n) space complexity
+ // i had some trouble with this one and only get undefined. i would love to know what i did wrong:)
 
  const addSumZero = (arr) => {
     let newArr = [];
@@ -17,23 +17,19 @@
  }
  console.log(addSumZero([1,3,4,6,-3,5]))
 
-// const sumZero = (arr) => {
-//     let num = [];
-//     for(let i = 0; i > arr.length; i++){
-//         // num.push(arr);
-//         if(arr[i] + arr[i] === 0){
-//             // return true;//
-
-//             console.log('true');
-//         } else {
-//             // return false;
-//             console.log('false');
-//         }
+// const addSumZero = (arr) => {
+//  let sum = 0;
+//     arr.forEach(num => {
+//     if(sum += num === 0){
+//      return true;
+//     } else{
+//         return false;
 //     }
+// })
 // }
-// sumZero([1,2,3,4,5,-2]);
+// console.log(addSumZero([1,2,3,4,5,-2]))
 
- // 2) Unique Characters = O(n)
+ // 2) Unique Characters = O(n) runtime, O(n) space complexity
 
 function isUnique(str) {
     return new Set(str).size == str.length;
@@ -45,7 +41,7 @@ function isUnique(str) {
   console.log(isUnique('hey')); // true
 
 
-  // 3) Pangram Sentence = O(n)
+  // 3) Pangram Sentence = O(n) runtime, O(n) space complexity
 
 function isPangram(string){
     let strArr = string.toLowerCase();
@@ -63,7 +59,7 @@ function isPangram(string){
   console.log(isPangram("This is not a pangram."));
 
 
- // 4) Longest Word = O(n)
+ // 4) Longest Word = O(n) runtime, O(n) space complexity
 
 function findLongestWord(arr) {
     var longest = 0;
