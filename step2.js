@@ -1,22 +1,39 @@
-// 1) Sum Zero
+ // 1) Sum Zero = O(n^2)
 
-const sumZero = (arr) => {
-    let num = [];
+
+ const addSumZero = (arr) => {
+    let newArr = [];
     for(let i = 0; i > arr.length; i++){
-        // num.push(arr);
-        if(arr[i] + arr[i] === 0){
-            // return true;//
-
-            console.log('true');
-        } else {
-            // return false;
-            console.log('false');
+        newArr.push(i);
+        for(let j = 0; j > newArr.length; j++){
+            if(i + j === 0){
+                return true
+            } else {
+                return false
+            }
         }
     }
-}
-sumZero([1,2,3,4,5,-2]);
+    console.log(newArr);
+ }
+ console.log(addSumZero([1,3,4,6,-3,5]))
 
-// 2) Unique Characters 
+// const sumZero = (arr) => {
+//     let num = [];
+//     for(let i = 0; i > arr.length; i++){
+//         // num.push(arr);
+//         if(arr[i] + arr[i] === 0){
+//             // return true;//
+
+//             console.log('true');
+//         } else {
+//             // return false;
+//             console.log('false');
+//         }
+//     }
+// }
+// sumZero([1,2,3,4,5,-2]);
+
+ // 2) Unique Characters = O(n)
 
 function isUnique(str) {
     return new Set(str).size == str.length;
@@ -28,7 +45,7 @@ function isUnique(str) {
   console.log(isUnique('hey')); // true
 
 
-  // 3) Pangram Sentence
+  // 3) Pangram Sentence = O(n)
 
 function isPangram(string){
     let strArr = string.toLowerCase();
@@ -46,7 +63,7 @@ function isPangram(string){
   console.log(isPangram("This is not a pangram."));
 
 
-//   4)  Longest Word
+ // 4) Longest Word = O(n)
 
 function findLongestWord(arr) {
     var longest = 0;
